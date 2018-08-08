@@ -1,0 +1,7 @@
+{
+  "name": "fallout-shelter-editor",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
