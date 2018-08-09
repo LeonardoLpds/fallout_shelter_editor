@@ -1,0 +1,16 @@
+page-main {
+  .tabs {
+    .tabbar {
+      .tab-button {
+        .tab-button-text {
+          color: color($colors, primary);
+          font-weight: bold;
+        }
+        border-bottom: 2px solid color($colors, primary);
+      }
+      .tab-button[aria-selected=true] {
+        border-bottom-color: color($colors, back);
+      }
+    }
+  }
+}
