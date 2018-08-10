@@ -3,13 +3,13 @@ page-main {
     .tabbar {
       .tab-button {
         .tab-button-text {
-          color: color($colors, primary);
+          color: colors(primary);
           font-weight: bold;
         }
-        border-bottom: 2px solid color($colors, primary);
+        border-bottom: 2px solid colors(primary);
       }
       .tab-button[aria-selected=true] {
-        border-bottom-color: color($colors, back);
+        border-bottom-color: colors(back);
       }
     }
   }

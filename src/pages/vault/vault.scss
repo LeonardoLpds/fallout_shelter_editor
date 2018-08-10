@@ -1,3 +1,40 @@
 page-vault {
-
+  .vault-door {
+    width: 100%;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 250px;
+    color: colors(secondary);
+    -webkit-animation: fa-spin 15s infinite linear;
+    animation: fa-spin 15s infinite linear;
+  }
+  .middle-col {
+    display:table;
+    height: 50%;
+    width: 100%;
+    span, ion-item {
+      .item-inner {
+        border-bottom: 0px !important;
+      }
+      .range-pin {
+        border-radius: 0px;
+      }
+      background: none;
+      border: none;
+      color: colors(primary);
+      display:table-cell;
+      vertical-align:middle;
+    }
+  }
+  .vault-number {
+    position: absolute;
+    top: 46%;
+    width: 96%;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    ion-icon {
+      font-size: 12px;
+    }
+  }
 }
