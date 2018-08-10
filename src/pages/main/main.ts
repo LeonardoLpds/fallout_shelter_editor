@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
  * Generated class for the MainPage tabs.
@@ -20,6 +20,7 @@ export class MainPage {
   storageRoot = 'StoragePage'
 
 
-  constructor(public navCtrl: NavController) {}
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
 
 }

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, IonicPage } from 'ionic-angular';
+import { HttpClient } from '@angular/common/http';
 
 @IonicPage()
 @Component({
@@ -8,12 +9,14 @@ import { NavController, IonicPage } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
-
+  constructor(public navCtrl: NavController, public httpClient: HttpClient) {
+    HttpClient
   }
 
   openVault() {
-    this.navCtrl.setRoot('MainPage');
+    this.httpClient.get('/assets/vault.json').subscribe(vault => {
+      this.navCtrl.setRoot('MainPage', vault);
+    })
   }
 
 }

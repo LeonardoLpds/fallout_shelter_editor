@@ -16,6 +16,7 @@ import { IonicPage, NavController, NavParams, App } from 'ionic-angular';
 export class VaultPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public app: App) {
+    console.log(this.navParams);
   }
 
   goHome() {
