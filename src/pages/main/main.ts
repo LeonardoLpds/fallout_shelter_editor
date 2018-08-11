@@ -23,4 +23,11 @@ export class MainPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
+  ionViewCanEnter(): boolean{
+    if (Object.keys(this.navParams.data).length === 0) {
+      this.navCtrl.setRoot('HomePage');
+    }
+    return true;
+  }
+
 }

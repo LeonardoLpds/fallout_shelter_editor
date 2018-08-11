@@ -15,7 +15,7 @@
         <ion-col col-4 text-center>
           <div class="middle-col">
             <ion-item>
-              <ion-range pin="true">
+              <ion-range pin="true" max="999999" [(ngModel)]="vault.storage.resources.Energy">
                 <ion-icon range-left small class="fa-bolt"></ion-icon>
               </ion-range>
             </ion-item>
@@ -27,14 +27,14 @@
         <ion-col text-right align-self-stretch>
           <div class="middle-col">
             <ion-item>
-              <ion-range pin="true">
+              <ion-range pin="true" max="999999" [(ngModel)]="vault.storage.resources.Water">
                 <ion-icon range-left small class="fa-tint"></ion-icon>
               </ion-range>
             </ion-item>
           </div>
           <div class="middle-col">
             <ion-item>
-              <ion-range pin="true" max="999999">
+              <ion-range pin="true" max="999999" [(ngModel)]="vault.storage.resources.Nuka">
                 <img src="https://vignette.wikia.nocookie.net/fallout/images/7/7c/FoS_bottle_cap.png" width="20px" range-left>
               </ion-range>
             </ion-item>
@@ -42,19 +42,19 @@
         </ion-col>
         <ion-col col-5>
           <ion-icon class="fa-cog vault-door"></ion-icon>
-          <span class="vault-number">150</span>
+          <span class="vault-number">{{vault.VaultName}}</span>
         </ion-col>
         <ion-col align-self-stretch>
           <div class="middle-col">
             <ion-item>
-              <ion-range pin="true">
+              <ion-range pin="true" max="999999" [(ngModel)]="vault.storage.resources.Food">
                 <ion-icon range-left small class="fa-cutlery"></ion-icon>
               </ion-range>
             </ion-item>
           </div>
           <div class="middle-col">
             <ion-item>
-              <ion-range pin="true" max="999999">
+              <ion-range pin="true" max="999999" [(ngModel)]="vault.storage.resources.NukaColaQuantum">
                 <img src="https://vignette.wikia.nocookie.net/fallout/images/7/74/FoS_Nuka-Cola_quantum.png" width="20px" range-left>
               </ion-range>
             </ion-item>
@@ -64,10 +64,10 @@
 
       <ion-row class="buttons">
         <ion-col col-3 style="padding-left: 2px">
-            <button ion-button block small color="secondary">STIMPACK(0)</button>
+            <button ion-button block small color="secondary">STIMPACK({{vault.storage.resources.StimPack}})</button>
         </ion-col>
         <ion-col col-3>
-            <button ion-button block small color="secondary">RADWAY(0)</button>
+            <button ion-button block small color="secondary">RADWAY({{vault.storage.resources.RadAway}})</button>
         </ion-col>
       </ion-row>
 
