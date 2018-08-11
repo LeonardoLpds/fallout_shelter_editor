@@ -1,77 +1,82 @@
 <ion-content padding>
-  <ion-segment color="primary" class="ios">
-    <ion-segment-button value="resources">
-      <span>Resources</span>
+  <ion-segment color="primary" class="ios" [(ngModel)]="vault_tab">
+    <ion-segment-button value="status">
+      <span>Status</span>
     </ion-segment-button>
     <ion-segment-button value="tools">
       <span>Tools</span>
     </ion-segment-button>
   </ion-segment>
 
-  <ion-grid>
+  <div [ngSwitch]="vault_tab">
+    <ion-grid *ngSwitchCase="'status'">
 
-    <ion-row justify-content-center align-items-center>
-      <ion-col col-4 text-center>
-        <div class="middle-col">
-          <ion-item>
-            <ion-range pin="true">
-              <ion-icon range-left small class="fa-bolt"></ion-icon>
-            </ion-range>
-          </ion-item>
-        </div>
-      </ion-col>
-    </ion-row>
+      <ion-row justify-content-center align-items-center>
+        <ion-col col-4 text-center>
+          <div class="middle-col">
+            <ion-item>
+              <ion-range pin="true">
+                <ion-icon range-left small class="fa-bolt"></ion-icon>
+              </ion-range>
+            </ion-item>
+          </div>
+        </ion-col>
+      </ion-row>
 
-    <ion-row justify-content-center align-items-center>
-      <ion-col text-right align-self-stretch>
-        <div class="middle-col">
-          <ion-item>
-            <ion-range pin="true">
-              <ion-icon range-left small class="fa-tint"></ion-icon>
-            </ion-range>
-          </ion-item>
-        </div>
-        <div class="middle-col">
-          <ion-item>
-            <ion-range pin="true" max="999999">
-              <img src="https://vignette.wikia.nocookie.net/fallout/images/7/7c/FoS_bottle_cap.png" width="20px" range-left>
-            </ion-range>
-          </ion-item>
-        </div>
-      </ion-col>
-      <ion-col col-5>
-        <ion-icon class="fa-cog vault-door"></ion-icon>
-        <span class="vault-number">150<ion-icon class="fa-pencil"></ion-icon></span>
-      </ion-col>
-      <ion-col align-self-stretch>
-        <div class="middle-col">
-          <ion-item>
-            <ion-range pin="true">
-              <ion-icon range-left small class="fa-cutlery"></ion-icon>
-            </ion-range>
-          </ion-item>
-        </div>
-        <div class="middle-col">
-          <ion-item>
-            <ion-range pin="true" max="999999">
-              <img src="https://vignette.wikia.nocookie.net/fallout/images/7/74/FoS_Nuka-Cola_quantum.png" width="20px" range-left>
-            </ion-range>
-          </ion-item>
-        </div>
-      </ion-col>
-    </ion-row>
+      <ion-row justify-content-center align-items-center>
+        <ion-col text-right align-self-stretch>
+          <div class="middle-col">
+            <ion-item>
+              <ion-range pin="true">
+                <ion-icon range-left small class="fa-tint"></ion-icon>
+              </ion-range>
+            </ion-item>
+          </div>
+          <div class="middle-col">
+            <ion-item>
+              <ion-range pin="true" max="999999">
+                <img src="https://vignette.wikia.nocookie.net/fallout/images/7/7c/FoS_bottle_cap.png" width="20px" range-left>
+              </ion-range>
+            </ion-item>
+          </div>
+        </ion-col>
+        <ion-col col-5>
+          <ion-icon class="fa-cog vault-door"></ion-icon>
+          <span class="vault-number">150<ion-icon class="fa-pencil"></ion-icon></span>
+        </ion-col>
+        <ion-col align-self-stretch>
+          <div class="middle-col">
+            <ion-item>
+              <ion-range pin="true">
+                <ion-icon range-left small class="fa-cutlery"></ion-icon>
+              </ion-range>
+            </ion-item>
+          </div>
+          <div class="middle-col">
+            <ion-item>
+              <ion-range pin="true" max="999999">
+                <img src="https://vignette.wikia.nocookie.net/fallout/images/7/74/FoS_Nuka-Cola_quantum.png" width="20px" range-left>
+              </ion-range>
+            </ion-item>
+          </div>
+        </ion-col>
+      </ion-row>
 
-    <ion-row justify-content-center align-items-center>
-      <ion-col col-4 text-center>
-        <div class="middle-col">
-          <ion-item>
-            <ion-range pin="true">
-              <ion-icon range-left small class="fa-medkit"></ion-icon>
-            </ion-range>
-          </ion-item>
-        </div>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+      <ion-row class="buttons">
+        <ion-col col-3 style="padding-left: 2px">
+            <button ion-button block small color="secondary">STIMPACK(0)</button>
+        </ion-col>
+        <ion-col col-3>
+            <button ion-button block small color="secondary">RADWAY(0)</button>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="vault-status">
+        <ion-col>TIME: 1d 23:32</ion-col>
+        <ion-col col-5>START: 12/12/12 11:21</ion-col>
+        <ion-col>SURVIVAL: NO</ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
 
 </ion-content>

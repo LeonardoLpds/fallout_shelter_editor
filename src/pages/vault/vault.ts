@@ -14,6 +14,7 @@ import { IonicPage, NavController, NavParams, App } from 'ionic-angular';
   templateUrl: 'vault.html',
 })
 export class VaultPage {
+  vault_tab = 'status'; 
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public app: App) {
     console.log(this.navParams);
