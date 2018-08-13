@@ -1,0 +1,16 @@
+page-stimpack-radaway {
+    ion-grid{
+        background-color: colors(secondary);
+        h5 {
+            text-align: center;
+            text-transform: uppercase;
+        }
+        ion-input {
+            border: 1px solid colors(primary);
+            input.text-input {
+                margin: 8px;
+            }
+        }
+    }
+
+}

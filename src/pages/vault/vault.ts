@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, App } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, App, PopoverController } from 'ionic-angular';
 
 /**
  * Generated class for the VaultPage page.
@@ -14,12 +14,21 @@ import { IonicPage, NavController, NavParams, App } from 'ionic-angular';
   templateUrl: 'vault.html',
 })
 export class VaultPage {
-  vault = {};
-  vault_tab = 'status';
+  vault : any = {};
+  vault_tab : String = 'status';
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public app: App) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public app: App, public popoverCtrl: PopoverController) {
     this.vault = this.navParams.data;
-    console.log(this.vault);
+  }
+
+  presentPopover(event, params) {
+    let popover = this.popoverCtrl.create("StimpackRadawayPage", params, {enableBackdropDismiss: false});
+    popover.onDidDismiss(data => {
+      this.vault.storage.resources[params.name] = data;
+    });
+    popover.present({
+      ev: event
+    });
   }
 
   ionViewCanEnter(): boolean{

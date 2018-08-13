@@ -52,7 +52,7 @@
         <ion-col col-5>
           <ion-icon class="fa-cog vault-door"></ion-icon>
           <ion-item class="vault-number">
-            <ion-input type="number" color="primary" [(ngModel)]="vault.VaultName"></ion-input>
+            <ion-input type="number" [(ngModel)]="vault.VaultName"></ion-input>
           </ion-item>
         </ion-col>
         <ion-col align-self-stretch>
@@ -68,7 +68,7 @@
           </div>
           <div class="middle-col">
             <ion-item>
-              <ion-input type="number" color="primary" [(ngModel)]="vault.storage.resources.NukaColaQuantum"></ion-input>
+              <ion-input type="number" [(ngModel)]="vault.storage.resources.NukaColaQuantum"></ion-input>
             </ion-item>
             <ion-item>
               <ion-range max="999999" [(ngModel)]="vault.storage.resources.NukaColaQuantum">
@@ -81,10 +81,14 @@
 
       <ion-row class="buttons">
         <ion-col col-3 style="padding-left: 2px">
-            <button ion-button block small color="secondary">STIMPACK({{vault.storage.resources.StimPack}})</button>
+          <button ion-button block small color="secondary" (click)="presentPopover($event, {qtd: vault.storage.resources.StimPack, name: 'StimPack'})">
+            STIMPACK({{vault.storage.resources.StimPack}})
+          </button>
         </ion-col>
         <ion-col col-3>
-            <button ion-button block small color="secondary">RADWAY({{vault.storage.resources.RadAway}})</button>
+          <button ion-button block small color="secondary" (click)="presentPopover($event, {qtd: vault.storage.resources.RadAway, name: 'RadAway'})">
+            RADWAY({{vault.storage.resources.RadAway}})
+          </button>
         </ion-col>
       </ion-row>
 
