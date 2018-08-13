@@ -36,16 +36,21 @@ page-vault {
       vertical-align:middle;
     }
   }
-  .vault-number {
+  ion-item.vault-number.item-block {
+    input {
+      text-align: center;
+    }
+    .item-inner{
+      border: none;
+      box-shadow: none !important;
+    }
+    background: transparent;
     position: absolute;
-    top: 46%;
-    width: 96%;
-    text-align: center;
+    top: 40%;
+    width: 93%;
     font-size: 26px;
     font-weight: bold;
-    ion-icon {
-      font-size: 12px;
-    }
+    color: colors(primary);
   }
   .buttons {
     button{
@@ -59,6 +64,18 @@ page-vault {
       padding: 2px;
       padding-top: 6px;
       border: 2px solid colors(back);
+    }
+  }
+  .middle-col {
+    ion-item {
+      display: block;
+      ion-range {
+        padding-top: 0px;
+      }
+      input {
+        margin-bottom: 0px;
+        text-align: center;
+      }
     }
   }
 }

@@ -5,7 +5,9 @@
 $background-color: colors(back);
 $text-color: colors(primary);
 
-$font-family-base: Monaco, Menlo, Consolas, "Courier New", monospace !default;
-$font-family-ios-base: Monaco, Menlo, Consolas, "Courier New", monospace !default;
-$font-family-md-base: Monaco, Menlo, Consolas, "Courier New", monospace !default;
-$font-family-wp-base: Monaco, Menlo, Consolas, "Courier New", monospace !default;
+$font-family-base: Monaco, Consolas, monospace !default;
+$font-family-ios-base: Monaco, Consolas, monospace !default;
+$font-family-md-base: Monaco, Consolas, monospace !default;
+$font-family-wp-base: Monaco, Consolas, monospace !default;
+
+$text-input-md-show-valid-highlight: false;
