@@ -93,9 +93,9 @@
       </ion-row>
 
       <ion-row class="vault-status">
-        <ion-col>TIME: 1d 23:32</ion-col>
-        <ion-col col-5>START: 12/12/12 11:21</ion-col>
-        <ion-col>SURVIVAL: NO</ion-col>
+        <ion-col>PLAYED: {{dateDiff(getTime(vault.timeGameBegin), getTime(vault.timeSaveDate))}} days</ion-col>
+        <ion-col col-5>STARTED: {{getTime(vault.timeGameBegin) | date:'mediumDate'}}</ion-col>
+        <ion-col>MODE: {{vault.VaultMode}}</ion-col>
       </ion-row>
     </ion-grid>
   </div>

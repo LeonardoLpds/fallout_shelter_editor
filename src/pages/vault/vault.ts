@@ -19,6 +19,7 @@ export class VaultPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public app: App, public popoverCtrl: PopoverController) {
     this.vault = this.navParams.data;
+    console.log(this.vault);
   }
 
   presentPopover(event, params) {
@@ -29,6 +30,14 @@ export class VaultPage {
     popover.present({
       ev: event
     });
+  }
+
+  getTime(time) {
+    return new Date(time / 10000 - Math.abs(new Date(0, 0, 1).setFullYear(1)));
+  }
+
+  dateDiff(start, end) {
+    return Math.round((end - start) / (1000*60*60*24))
   }
 
   ionViewCanEnter(): boolean{

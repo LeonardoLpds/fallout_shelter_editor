@@ -19,8 +19,12 @@ export class MainPage {
   dwellersRoot = 'DwellersPage'
   storageRoot = 'StoragePage'
 
+  config : any = {};
+  toVault : any = {};
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.config = navParams.data;
+    this.toVault = {...this.config.vault, ...this.config.timeMgr};
   }
 
   ionViewCanEnter(): boolean{
